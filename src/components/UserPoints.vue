@@ -18,7 +18,7 @@
         created: function(){
             this.username = this.$route.params.username
             let self = this
-            axios.get("https://reserva-hoteles-g1m3-18.herokuapp.com/user/RewardPoints/" + this.username)
+            axios.get("https://reservahotelesminticjg.herokuapp.com/user/RewardPoints/" + this.username)
                 .then((result) => {
                     self.RewardPoints = result.data.RewardPoints
                 })

@@ -37,7 +37,7 @@ export default {
     methods:{
         submitForm(){
             console.log(this.form)
-            axios.post('https://reserva-hoteles-g1m3-18.herokuapp.com/search/', this.form)
+            axios.post('https://reservahotelesminticjg.herokuapp.com/search/', this.form)
                  .then((res) => {
                      console.log(res.data)//Perform Success Action
                  })
