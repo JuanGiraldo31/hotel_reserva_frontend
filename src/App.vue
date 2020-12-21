@@ -6,7 +6,7 @@
         <button v-on:click="init" v-if="is_auth" > Inicio </button>
         <button v-on:click="getPoints" v-if="is_auth" > Puntos </button>
         <button v-on:click="buscarHabitacion" > Buscar </button>
-        <button v-if="is_auth" >Cerrar Sesión</button>
+        <button v-on:click="mostrarComidas" >Comidas</button>
       </nav>
     </div>
 
@@ -14,7 +14,7 @@
       <router-view></router-view>
     </div>
     <div class="footer">
-      <h2>Misión TIC 2022 - G1M3_18</h2>
+      <h2>Misión TIC 2022 - G1M3_16</h2>
     </div>
   </div>
 </template>
@@ -48,6 +48,12 @@ export default {
         this.$router.push({ name:"search_room"})
       }
     },
+    mostrarComidas: function(){
+      if(this.$route.name != "food_type"){
+        this.$router.push({ name:"food_type"
+                        })
+      }
+    }
   },
   beforeCreate: function(){
     localStorage.setItem('current_username', 'camilo24')
